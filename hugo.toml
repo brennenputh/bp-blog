@@ -5,8 +5,8 @@ theme = "smol"
 
 # Parameters
 [params]
-    subtitle = "Your blog subtitle goes here!"
-    dateFmt = "02.01.2006 15:04"
+    subtitle = "My personal thoughts and tips."
+    dateFmt = "2024-02-24"
 
 # Header
 [menu]
@@ -31,15 +31,5 @@ theme = "smol"
 # Footer
   [[menu.footer]]
         name = "Github"
-        url = "https://github.com/example"
+        url = "https://github.com/brennenputh"
         weight = 1 
-
-    [[menu.footer]]
-        name = "Mastodon"
-        url = "https://example.com/@user"
-        weight = 2 
-
-    [[menu.footer]]
-        name = "Imprint"
-        url = "/imprint"
-        weight = 3
