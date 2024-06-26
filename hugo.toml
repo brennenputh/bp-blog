@@ -1,6 +1,6 @@
 baseURL = 'https://blog.brennenputh.me/'
 languageCode = 'en-us'
-title = 'BPuth Blog'
+title = 'BP Blog'
 theme = "smol"
 
 # Parameters
