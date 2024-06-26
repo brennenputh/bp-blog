@@ -5,7 +5,7 @@ theme = "smol"
 
 # Parameters
 [params]
-    subtitle = "My personal thoughts and tips."
+    subtitle = "A dumping grounds for my thoughts."
     dateFmt = "2024-02-24"
 
 # Header
