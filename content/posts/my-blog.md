@@ -5,9 +5,7 @@ slug: my-blog
 type: posts
 draft: false
 categories:
-  - default
 tags:
-  - default
 ---
 
 If you are reading this, you have reached far back in time (or you're very early to reading my blog, hi bots!).

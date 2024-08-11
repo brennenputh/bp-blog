@@ -1,35 +1,55 @@
 baseURL = 'https://blog.brennenputh.me/'
 languageCode = 'en-us'
-title = 'BP Blog'
-theme = "smol"
+title = '''Brennen Puth's Blog'''
+theme        = "hello-friend-ng"
+paginate     = 10
 
-# Parameters
 [params]
-    subtitle = "A dumping grounds for my thoughts."
-    dateFmt = "2024-02-24"
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
 
-# Header
-[menu]
+  # Subtitle for home
+  homeSubtitle = "Where all my thoughts go."
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+  
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = true
+
+  # Metadata mostly used in document's head
+  description = "Brennen Puth's Blog"
+  keywords = "homepage, blog"
+  images = [""]
+
+[taxonomies]
+    category = "blog"
+
+[languages]
+  [languages.en]
+    title = "Brennen Puth's Blog"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+  [languages.en.params]
+    subtitle  = "Where my thoughts go."
+
+    [languages.en.params.logo]
+      logoText = "Brennen Puth"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
   [[menu.main]]
-        identifier = "posts"
-        name = "Posts"
-        url = "/posts/"
-        weight = 1 
-
-  [[menu.main]]
-        identifier = "categories"
-        name = "Categories"
-        url = "/categories/"
-        weight = 2 
-
-  [[menu.main]]
-        identifier = "tags"
-        name = "Tags"
-        url = "/tags/"
-        weight = 3
-
-# Footer
-  [[menu.footer]]
-        name = "Github"
-        url = "https://github.com/brennenputh"
-        weight = 1 
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
