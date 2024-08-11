@@ -13,18 +13,18 @@ tags:
 
 This post was almost entirely inspired by [Andreas Karlson's blog post](https://andreasjhkarlsson.github.io/jekyll/update/2023/12/27/4-billion-if-statements.html) where he details how he created the worst version of an `isOdd` function ever to visit this land.
 Andreas's 4 billion if statements cover the whole of 32-bit integers, and ultimately were written in Assembly to avoid compiler limits from C++.
-Of course, when I saw this post, I wondered, browsers support [WASM](https://en.wikipedia.org/wiki/WebAssembly), how crippled would a browser be to read a 4 billion if statement WASM program?
+Of course, when I saw this post, I wondered, how crippled would a browser be to read a 4 billion if statement WASM program?
 
 I started my exploration in a similar way: I attempted to write a Rust program that compiled to WASM for the simplest solution.
 Using a Python script to generate the if statements, I used the first wasm-pack base I found and gave Rust a shot.
 This went well for smaller numbers (under 2^20 or so).  After reaching 2^20, the Rust compile times became absurdly long.
 The file with 2^8 if statements compiled in about 10 seconds.  The file with 2^16 took about 8 minutes.
-When I tried the file with 2^24 if statements, the Rust compiler still tried, but ultimately I had to go to bed and shut it down after about a half hour.
+When I tried the file with 2^24 if statements, the Rust compiler still tried, but ultimately I had to go to bed and shut it down after about three hours.
 This isn't too surprising, since the Rust compiler is optimized for safety, but I did want a WASM file with 4 billion if statements before the end of the millenia still.
 
 When Rust took too long, I decided the C/C++ to WASM route was probably also improbable for the same reason as in the original rendition.  The compiler won't like a 330GB code file.
 I may also have decided this because I really wanted to mess with writing binaries, but that's not the point here.
-The point here is that the plan was to write the WASM by hand and then run it within a node project.  That's exactly what I did.
+The point here is that the plan was to write the WASM by hand.
 
 Since I didn't have any prior experience with working with binary formats, I started by compiling a simple WASM program which did a single comparison, and parsed that in order to understand what was going on.
 With a single if statement, I was able to begin understanding the binary format.  Here's the quick explanation:
