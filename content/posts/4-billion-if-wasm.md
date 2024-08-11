@@ -3,7 +3,7 @@ title: "4 Billion If Statements, For the Web"
 date: 2024-08-11T08:13:12-04:00
 slug: 4-billion-if-wasm 
 type: post
-draft: true
+draft: false
 categories:
   - projects
 tags:
