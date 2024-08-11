@@ -1,7 +1,7 @@
 ---
 title: "590 Thousand If Statements, For the Web"
 date: 2024-08-11T08:13:12-04:00
-slug: 4-billion-if-wasm 
+slug: 590-thousand-if-wasm 
 type: post
 draft: false
 categories:
