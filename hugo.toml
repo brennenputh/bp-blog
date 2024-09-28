@@ -1,6 +1,6 @@
 baseURL = 'https://blog.brennenputh.me/'
 languageCode = 'en-us'
-title = '''Brennen Puth's Blog'''
+title = '''Brennen's Blog'''
 theme        = "hello-friend-ng"
 paginate     = 10
 
@@ -23,7 +23,7 @@ paginate     = 10
   enableGlobalLanguageMenu = true
 
   # Metadata mostly used in document's head
-  description = "Brennen Puth's Blog"
+  description = "Brennen's Blog"
   keywords = "homepage, blog"
   images = [""]
 
