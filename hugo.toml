@@ -11,5 +11,6 @@ pygmentsCodeFences = true
 
 [params]
     tagline = ""
-    customCSS = []  #Optional Customised CSS
+    customCSS = ["css/code.css"]  #Optional Customised CSS
     disableDarkModeCSS = false # disables css style for users using dark-mode
+    mathjax = true

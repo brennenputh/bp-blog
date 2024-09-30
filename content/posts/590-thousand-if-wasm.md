@@ -25,26 +25,26 @@ Since I didn't have any prior experience with working with binary formats, I sta
 With a single if statement, I was able to begin understanding the binary format.  Here's the quick explanation:
 
 WASM files all start with the following bytes, the first four are a special sequence (equivalent to `\0asm`) and the latter four are a version number.  WASM is on version one at the time of writing.
-```bytes
+```
 00 61 73 6D 01 00 00 00
 ```
 
 The next step is the types section.  Quick detour about sections, every one starts with a id and then a [LEB128 encoded number](https://en.wikipedia.org/wiki/LEB128) which defines the length of the section.
 The type section has an id of `3` and will contain a single function type, taking a i32 parameter and returning a i32.  Booleans in WASM are represented by i32, returning a `0` or `1`.
-```bytes
+```
 01 06 01 60 01 7F 01 7F
 ```
 I won't go too far into the details of the type here, you can take a look at the [WASM instruction list](https://webassembly.github.io/spec/core/appendix/index-instructions.html) yourself if you get curious.
 
 The function also has to be defined separately in the function section, which is simple enough.
-```bytes
+```
 03 02 01 00
 ```
 To translate, we are declaring we are in section id 3, giving it a length of 2, and reporting which types the function has in the func section of the module.
 I don't fully understand this bit either, don't worry.  All that's important here is that the compiler expects it.
 
 Finally, the function needs a name, given in the export section.  This is also the section that makes the function available from JavaScript.
-```bytes
+```
 07 09 01 05 69 73 4F 64 64 00 00
 ```
 The gist of this one is that the ASCII for the function name `isOdd` is encoded into the bytes of the section.

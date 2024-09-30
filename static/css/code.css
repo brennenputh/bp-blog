@@ -1,0 +1,8 @@
+#container main article p code {
+  background-color: #0f0f0f;
+}
+
+#container main article > pre {
+  background-color: #272822;
+  box-shadow: none;
+}
