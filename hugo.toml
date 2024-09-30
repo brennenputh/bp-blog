@@ -1,6 +1,6 @@
 baseURL = 'https://blog.brennenputh.me/'
 languageCode = 'en-us'
-title = '''Brennen Puth's Blog'''
+title = '''Brennen's Blog'''
 theme        = "hugo-kiera"
 
 pygmentsCodeFences = true
