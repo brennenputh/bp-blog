@@ -2,13 +2,8 @@
 title: "590 Thousand If Statements, For the Web"
 date: 2024-08-11T08:13:12-04:00
 slug: 590-thousand-if-wasm 
-type: post
+type: posts
 draft: false
-categories:
-  - projects
-tags:
-  - programming
-  - wasm
 ---
 
 This post was almost entirely inspired by [Andreas Karlson's blog post](https://andreasjhkarlsson.github.io/jekyll/update/2023/12/27/4-billion-if-statements.html) where he details how he created the worst version of an `isOdd` function ever to visit this land.
