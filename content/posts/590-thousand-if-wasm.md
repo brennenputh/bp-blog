@@ -5,9 +5,10 @@ slug: 590-thousand-if-wasm
 type: posts
 draft: false
 categories:
-  - default
+  - programming
 tags:
-  - default
+  - wasm
+  - web
 ---
 
 This post was almost entirely inspired by [Andreas Karlson's blog post](https://andreasjhkarlsson.github.io/jekyll/update/2023/12/27/4-billion-if-statements.html) where he details how he created the worst version of an `isOdd` function ever to visit this land.
